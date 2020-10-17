@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 8900;
+const port = process.env.PORT || 9805;
 const mongo = require('mongodb');
 const MongoClient = mongo.MongoClient;
 const mongoUrl = "mongodb+srv://admin:little123@cluster0.8eac1.mongodb.net/edurekainternship?retryWrites=true&w=majority";
@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.get('/',(req,res) => {
-    res.send("<div><a href='http://localhost:8900/location'>Location</a><br/><a href='http://localhost:8900/mealtype'>MealType</a><br/><a href='http://localhost:8900/cuisine'>Cuisine</a><br/><a href='http://localhost:8900/restaurant'>Restaurant</a></div>")
+    res.send("<div><a href='http://localhost:9805/location'>Location</a><br/><a href='http://localhost:9805/mealtype'>MealType</a><br/><a href='http://localhost:9805/cuisine'>Cuisine</a><br/><a href='http://localhost:9805/restaurant'>Restaurant</a></div>")
 })
 
 //City List
